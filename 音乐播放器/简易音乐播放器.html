@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易音乐播放器</title>
+	</head>
+	<script>
+		var music = document.createElement('audio');
+		music.src = 'mp3/The_Grey.mp3';
+		music.play();
+		var musicBox= {
+			music : null, 
+			songs : [],
+			init : function(){
+				this.music = document.createElement('audio');
+			},
+			add : function(src){
+				this.songs.push(src);
+			},
+			play : function(index){
+				this.music.src = this.songs[index];
+				this.music.play();
+			},
+			stop : function(){
+				this.music.pause();
+			},
+            next : function(){
+ 
+            },
+            prev : function(){
+ 
+            }
+        }
+		
+        musicBox.init(); //初始化
+        musicBox.add('mp3/Take_Me_Hands.mp3');
+        musicBox.add('mp3/The_Grey.mp3');
+        musicBox.add('mp3/Unity.mp3');
+        musicBox.play(0);
+		
+		
+	</script>
+	<body>
+		<header>
+			<h1>在线音乐</h1>
+			<h1>本地音乐</h1>
+		</header>
+		<article>
+			<p>Take_Me_Hands</p><button>播放</button><br />
+			<p>The_Grey</p><button>播放</button><br />
+			<p>Unity</p><button>播放</button><br />
+		</article>
+		<footer>
+			<audio src='mp3/Take_Me_Hands.mp3' controls=""></audio>
+		</footer>
+	</body>
+</html>

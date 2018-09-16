@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习个人信息页面</title>
+		<style type="text/css">
+			form{
+				width: 500px;
+			}
+			fieldset legend{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="testform" action="#testform" method="get">
+		    <h1>请填写个人信息</h1>
+		    <fieldset>
+		        <legend>基本信息</legend>
+		                姓名<input type="text" name="xingming" />
+		        <br />
+		                年龄<input type="number" name="nianling" min="1" max="120" />
+	        </fieldset>
+	        <br />
+	        <fieldset>
+		        <legend>你想在哪里收到邮件？</legend>
+		                邮箱<input type="email" name="email" placeholder="请输入邮箱"/>
+	        </fieldset>
+	        <br />
+	        <fieldset>
+		        <legend>收入情况</legend>
+		                月收入<input type="number" id="a" value="20k+">
+	            <br />
+		                银行卡<input type="number" name="yinhangka" />
+		                有效期<input type="date" name="riqi" />
+	        </fieldset>
+	        <br />
+	        <fieldset>
+		        <legend>选择提交文件</legend>
+		                文件<input type="button" name="wenjian" value="选择文件"/>
+		                未选择任何文件
+	        </fieldset>
+	        <br />
+	        <input type="submit" />
+		</form>
+	</body>
+</html>

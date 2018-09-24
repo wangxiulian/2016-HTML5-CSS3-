@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>页面换肤</title>
+	</head>
+	<style>
+		fieldset legend{
+			color: #FF0000;
+		}
+		#grey{
+			background: #808080;
+		}
+		#purple{
+			background: #800080;
+		}
+		#red{
+			background: #FF0000;
+		}
+		#blue{
+			background: #0000FF;
+		}
+		#orange{
+			background: #FFA500;
+		}
+		#green{
+			background: #8CEA00;
+		}
+	</style>
+	<body>
+		<fieldset>
+			<legend>页面换肤</legend>
+			<fieldset>
+				<button id="grey" onclick="grey()"></button>
+				<button id="purple" onclick="purple()"></button>
+				<button id="red" onclick="red()"></button>
+				<button id="blue" onclick="blue()"></button>
+				<button id="orange" onclick="orange()"></button>
+				<button id="green" onclick="green()"></button>
+		    </fieldset>
+		    <div id="div1">
+			    <p>LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。</p>
+		    </div>
+		</fieldset>
+	</body>
+	<script>
+		window.onload = function(){
+			if(!window.localStorage){
+				alert("你的浏览器不支持LocalStorage，请你更新浏览器");	
+			}
+			else{
+				var storage=localStorage;
+				var colorArr=new Array("grey","purple","red","blue","orange","green");
+				function grey(){
+					var div1=document.getElementById("div1");
+					div1.style.backgroundColor=colorArray[0];
+					window.localStorage.setItem('divBackColor',colorArray[0]);
+				}
+				function purple(){
+					var div1=document.getElementById("div1");
+					div1.style.backgroundColor=colorArray[1];
+					window.localStorage.setItem('divBackColor',colorArray[1]);
+				}
+				function red(){
+					var div1=document.getElementById("div1");
+					div1.style.backgroundColor=colorArray[2];
+					window.localStorage.setItem('divBackColor',colorArray[2]);
+				}
+				function blue(){
+					var div1=document.getElementById("div1");
+					div1.style.backgroundColor=colorArray[3];
+					window.localStorage.setItem('divBackColor',colorArray[3]);
+				}
+				function orange(){
+                	var div1=document.getElementById("div1");
+                	div1.style.backgroundColor=colorArray[4];
+                	window.localStorage.setItem('divBackColor',colorArray[4]);
+                }
+                function green(){
+                	var div1=document.getElementById("div1");
+                	div1.style.backgroundColor=colorArray[5];
+                	window.localStorage.setItem('divBackColor',colorArray[5]);
+                }
+                
+                window.onload=function color(){
+                	document.getElementById("div1").style.backgroundColor=window.localStorage.getItem('divBackColor');
+                }
+			}
+		}
+	</script>
+</html>

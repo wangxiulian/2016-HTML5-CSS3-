@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖动图片在指定区域显示</title>
+		<script>
+			var dropPic = document.getElementById('dropPic');
+			dropPic.ondragover = function(ev) {
+				ev.preventDefault();
+			};
+
+		</script>
+	</head>
+	<body>
+		<h2>上传头像</h2>
+		<div id="dropPic" style="width: 200px; height: 200px; border: 1px solid gray;"></div>
+	</body>
+</html>

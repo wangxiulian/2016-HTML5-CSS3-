@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>案例实战</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: #fff url(images/bg3.jpg);
+				padding-top: 50px;
+			}
+			img{
+				position: absolute; 
+				top:50px; 
+				left:100px; 
+				cursor: pointer;
+                padding:10px 10px 25px; 
+                background-color: #fff; 
+                border:1px solid #ddd;
+                transition:0.5s; box-shadow: 3px 3px 3px #ccc;
+			}
+			.img1 {    
+				left:40px;    
+				top:50px;    
+				transform:rotate(30deg);    
+				z-index: 1;
+			}
+            .img2 {    
+            	left:156px;    
+            	top:250px;    
+            	transform:rotate(-30deg);    
+            	z-index: 1;
+            }
+            .img3 {    
+            	left:381px;    
+            	top:60px;    
+            	transform:rotate(30deg);    
+            	z-index: 1;
+            }
+            .img4 {    
+            	left:458px;    
+            	top:256px;    
+            	transform:rotate(30deg);    
+            	z-index: 1;
+            }
+            .img5 {    
+            	left:684px;    
+            	top:110px;    
+            	transform:rotate(-40deg);    
+            	z-index: 1;
+            }
+            .img6 {    
+            	left:789px;    
+            	top:300px;    
+            	transform:rotate(-40deg);    
+            	z-index: 1;
+            }
+            img:hover {    
+            	transform:rotate(0deg);    
+            	transform:scale(1.5);    
+            	box-shadow: 6px 6px 6px #656565; 
+            	z-index: 2;
+            }
+		</style>
+	</head>
+	<body>
+		<div id="container">				
+			<img class="img1" src="images/11.jpg" height="150" width="200"/>
+			<img class="img2" src="images/22.jpg" height="150" width="150"/>
+			<img class="img3" src="images/33.jpg" height="150" width="200"/>
+			<img class="img4" src="images/44.jpg" height="150" width="170"/>
+			<img class="img5" src="images/55.jpg" height="150" width="160"/>
+			<img class="img6" src="images/66.jpg" height="150" width="170"/>
+		</div>
+	</body>
+</html>
